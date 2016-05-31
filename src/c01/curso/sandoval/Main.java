@@ -7,6 +7,8 @@ public class Main {
         System.out.println("Hola Mundo");
         // leeNombre();
         tiposDeDatos();
+        desiciones();
+        operadoresArtimeticos();
     }
 
 
@@ -31,12 +33,11 @@ public class Main {
 
 
     /**
-     * Tipos de datos:
-     *
-     *
+     * Tipos de datos
      *
      */
     private static void tiposDeDatos(){
+        // Primitivos/Basicos
         byte edad = 0;     // 1 byte :)
         short numero = 0;  // 2 bytes
         int i = 0;         // 4 bytes
@@ -46,7 +47,56 @@ public class Main {
         char c = 'A';      // caracter, 2 bytes
         boolean b = false; // true/false, 1 byte
 
+        // Objetos
         String cadena = "Yomero";
         System.out.println("Yo soy: " + cadena);
+    }
+
+
+    /**
+     *  +  Suma
+     *  -  Resta
+     *  *  Multiplicación
+     *  /  División
+     *  %  Modulo divisor
+     *
+     */
+    private static void operadoresArtimeticos() {
+        int a = 20;
+        int b = 50;
+        int r = a + b;
+        System.out.println("La suma es " + r);
+        System.out.format("La suma de %d + %d = %d", a, b, r);
+    }
+
+
+    /**
+     * Desiciones/Condiciones
+     *  ==     Es igual
+     *  !=     Es distinto
+     *  <, <=, >, >=  Menor, menor o igual, mayor, mayor o igual
+     *
+     *  &&     Operador and (y)
+     *  ||     Operador or (o)
+     *  !      Operador not (no)
+     *
+     */
+    private static void desiciones(){
+        int edad = 17;
+        if (edad<=18) {
+            System.out.println("Eres menor de edad!");
+        }
+
+        int calificacion = 45;
+        if (calificacion<=60) {
+            System.out.println("REPROBASTE!");
+        }
+        else {
+            System.out.println("OK, estas aprobado");
+        }
+
+        int resto = 100 % 2;
+        String msg = (resto==0) ? "Es Par" : "Es Impar";
+        System.out.println("El numero 100 " + msg);
     }
 }
