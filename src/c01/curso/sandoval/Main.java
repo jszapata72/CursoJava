@@ -9,6 +9,7 @@ public class Main {
         tiposDeDatos();
         desiciones();
         operadoresArtimeticos();
+        ciclos();
     }
 
 
@@ -18,6 +19,9 @@ public class Main {
      *
      */
     public static void leeNombre() {
+        System.out.println();
+        System.out.println("===== HOLA MUNDO =====");
+
         // Declara variable scanner
         Scanner scanner = new Scanner(System.in);
 
@@ -37,6 +41,9 @@ public class Main {
      *
      */
     private static void tiposDeDatos(){
+        System.out.println();
+        System.out.println("===== TIPOS DE DATOS =====");
+
         // Primitivos/Basicos
         byte edad = 0;     // 1 byte :)
         short numero = 0;  // 2 bytes
@@ -60,13 +67,18 @@ public class Main {
      *  /  División
      *  %  Modulo divisor
      *
+     *  ++
+     *
      */
     private static void operadoresArtimeticos() {
+        System.out.println();
+        System.out.println("===== OPERADORES ARITMETICOS =====");
+
         int a = 20;
         int b = 50;
         int r = a + b;
         System.out.println("La suma es " + r);
-        System.out.format("La suma de %d + %d = %d", a, b, r);
+        System.out.format("La suma de %d + %d = %d \n", a, b, r);
     }
 
 
@@ -82,6 +94,9 @@ public class Main {
      *
      */
     private static void desiciones(){
+        System.out.println();
+        System.out.println("===== DESICIONES =====");
+
         int edad = 17;
         if (edad<=18) {
             System.out.println("Eres menor de edad!");
@@ -98,5 +113,52 @@ public class Main {
         int resto = 100 % 2;
         String msg = (resto==0) ? "Es Par" : "Es Impar";
         System.out.println("El numero 100 " + msg);
+
+
+        // SWITCH
+        int diaSemana = 3;
+        switch (diaSemana){
+            case 1:
+                System.out.println("Lunes");
+                break;
+            case 2:
+                System.out.println("Martes");
+                break;
+            case 3:
+                System.out.println("Miercoles");
+                break;
+            case 4:
+                System.out.println("Jueves");
+                break;
+            case 5:
+                System.out.println("Viernes");
+                break;
+
+            default:
+                System.out.println("Quien sabe");
+        }
+    }
+
+
+    /**
+     * ciclos/loops/iteraciones
+     * while, do-while, for
+     *
+     */
+    private static void ciclos() {
+        System.out.println();
+        System.out.println("===== CICLOS =====");
+
+        int i = 1;
+        while (i<=5) {
+            System.out.format("While--Item %d\n", i);
+            i++;
+        }
+
+        i = 1;
+        do {
+            System.out.format("Do While--Item %d\n", i);
+            i++;
+        } while (i<=5);
     }
 }
