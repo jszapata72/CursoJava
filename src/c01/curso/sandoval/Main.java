@@ -79,6 +79,14 @@ public class Main {
         int r = a + b;
         System.out.println("La suma es " + r);
         System.out.format("La suma de %d + %d = %d \n", a, b, r);
+
+        int i=0;
+        i++;      // incrementa en 1 el valor de i pero retorna el valor anterior
+        ++i;      // incrementa en 1 el valor de i y retorna nuevo valor
+        i+=10;    // suma 10 al valor de i
+        i-=5;     // resta 5 al valor de i
+        i*=3;     // incrementa 3 veces el valor de i
+        System.out.println(i);
     }
 
 
@@ -160,5 +168,19 @@ public class Main {
             System.out.format("Do While--Item %d\n", i);
             i++;
         } while (i<=5);
+
+        for (i=1; i<=5; i++) {
+            System.out.format("For--Item %d\n", i);
+        }
+    }
+
+
+    /**
+     * Constantes
+     *
+     */
+    public static final double PI = 3.1416;
+    private static double areaCirculo(double radio){
+        return PI*radio*radio;
     }
 }
