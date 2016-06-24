@@ -22,7 +22,7 @@ public class miString {
     String s5 = s1.replace('o', '-');       // devuelve la cadena resultante de reemplazar 'o' x '-'
     String s6 = s1.toLowerCase();
     String s7 = s1.toUpperCase();
-    char arrChar[] = new char[4] = s1.toCharArray();  // Pasa la cadena a un array de caracteres
+    char arrChar[] = s1.toCharArray();  // Pasa la cadena a un array de caracteres
 
 
     // De aqui en adelante agregar ejemplos de uso comun de los metodos/funciones
