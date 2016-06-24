@@ -38,6 +38,7 @@ public class Main {
         tiposDeDatos();
         desiciones();
         operadoresArtimeticos();
+        arreglos();
         ciclos();
     }
 
@@ -214,4 +215,52 @@ public class Main {
     private static double areaCirculo(double radio){
         return PI*radio*radio;
     }
+
+
+    /**
+     * Arrays
+     *
+     */
+    public static void arreglos(){
+        System.out.println();
+        System.out.println("===== ARRAYS =====");
+
+        int numeros[];
+        numeros = new int[10];
+
+        for (int i=0; i<=9; i++){
+            numeros[i] = i*2;
+            System.out.println("numeros[]" + numeros[i]);
+        }
+
+        int otro_numero[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        for (int i=0; i<=8; i++){
+            System.out.println("otro_numero: " + otro_numero[i]);
+        }
+
+        // Arreglos multi-dimension
+        int dosD[][]= new int[4][5];
+        int i, j, k = 0;
+        for (i=0; i<4; i++)
+            for (j=0; j<5; j++) {
+                dosD[i][j] = k;
+                k++;
+            }
+        for(i=0; i<4; i++) {
+            for(j=0; j<5; j++)
+                System.out.print(dosD[i][j] + " ");
+            System.out.println();
+        }
+
+        // Otra manera de declarar un arreglo:
+        int[] a = new int[4];
+
+        // Tambien se puede asignar individualmente...
+        int dos[][] = new int[4][];
+        dos[0] = new int[5];
+        dos[1] = new int[10];
+        dos[2] = new int[6];
+        dos[3] = new int[8];
+    }
 }
+
