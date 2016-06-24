@@ -1,3 +1,31 @@
+/**
+ *
+ * Nomenclatura estandar en JAVA:
+ * ==============================
+ *
+ * Clases: Para todo nombre de clase, la primera letra debe de ser Mayúscula, si son varias palabras
+ *         se debe de intercalar entre mayúsculas y minúsculas, este mecanismo de nombre es llamado
+ *         camelCase (Por ejemplo: NombreDeClase, Animal, Factura).
+ *
+ * Interfaces: Aplica la misma definición de clases, pero se debe colocar la terminación "able"
+ *             al final del nombre de la clases  (Por ejemplo Runnable, Serializable).
+ *
+ * Métodos: Para los metodos de clases, la primera letra debe ser minúscula, si son varias
+ *          palabras se debe de intercalar entre minúsculas y mayúsculas, para el caso de los
+ *          métodos de clases aplica el mecanismo del camelCase
+ *          (Por ejemplo getNombre, setEdad, buscarPorIdPersona)
+ *
+ * Variables: Para las variables, se aplica el caso de los métodos, donde la primera letra es minúscula,
+ *            y las demás se deben de guiar por el mecanismo de camelCase, lo que es importante de destacar,
+ *            es que los nombres de las variables, además de cumplir lo anterior, deben ser cortos y
+ *            descriptivos en si mismo. (Por ejemplo: nombre, edad, idPersona)
+ *
+ * Constantes: Para la constantes, su nombre debe ser escrito completamente en Mayúsculas, y para la
+ *             separación de palabras se debe usar el underscore/guión bajo (_).
+ *             (Por ejemplo MAX_SUMA, VALOR_MULTIPLO).
+ *
+ */
+
 package c01.curso.sandoval;
 import java.util.Scanner;
 
@@ -6,6 +34,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hola Mundo");
         // leeNombre();
+
         tiposDeDatos();
         desiciones();
         operadoresArtimeticos();
@@ -49,8 +78,8 @@ public class Main {
         short numero = 0;  // 2 bytes
         int i = 0;         // 4 bytes
         long total = 0;    // 8 bytes
-        float r = 0.0f;     // decimal simple, 4 bytes
-        double d = 0.0d;    // decimal doble, 8 bytes
+        float r = 0.0f;    // decimal simple, 4 bytes
+        double d = 0.0d;   // decimal doble, 8 bytes
         char c = 'A';      // caracter, 2 bytes
         boolean b = false; // true/false, 1 byte
 
@@ -180,6 +209,8 @@ public class Main {
      *
      */
     public static final double PI = 3.1416;
+    public static final int MAX_NUMBER_OF_ITEMS = 100;
+
     private static double areaCirculo(double radio){
         return PI*radio*radio;
     }
